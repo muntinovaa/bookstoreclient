@@ -8,5 +8,5 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_TOKEN
+    secure: $HEROKU
   app: book-store-web
