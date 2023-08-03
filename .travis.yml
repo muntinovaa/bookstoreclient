@@ -4,9 +4,15 @@ node_js:
 script:
   - "npm run build"
   - "npm run test:nowatch"
+sudo: true
+branches:
+  only:
+    - main
 
 deploy:
   provider: heroku
-  api_key:
-    secure: $HEROKU
-  app: book-store-web
+  skip_cleanup: true
+  api_key: $HEROKU_TOKEN
+  app: book-store-web1
+  on:
+    branch: main
