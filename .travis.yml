@@ -12,7 +12,7 @@ dist: xenial
 deploy:
   provider: heroku
   skip_cleanup: true
-  api_key: $HEROKU_TOKEN
+  api_key: $HEROKU_API
   app: book-store-web1
   on:
     branch: main
