@@ -4,14 +4,15 @@ node_js:
 script:
   - "npm run build"
   - "npm run test:nowatch"
-sudo: true
+
 branches:
   only:
     - main
-dist: xenial
+arch: amd64          # optional, this is default, routes to a full VM
+os: linux            # optional, this is default
+dist: focal
 deploy:
   provider: heroku
-  skip_cleanup: true
   api_key: $HEROKU_API
   app: book-store-web1
   on:
