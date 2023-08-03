@@ -4,7 +4,7 @@ node_js:
 script:
   - "npm run build"
   - "npm run test:nowatch"
-
+sudo: true
 branches:
   only:
     - main
@@ -14,6 +14,7 @@ dist: focal
 deploy:
   provider: heroku
   api_key: $HEROKU_API
-  app: book-store-web1
+  skip_cleanup: true
+  app: "book-store-web1"
   on:
     branch: main
