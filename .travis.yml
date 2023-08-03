@@ -8,7 +8,7 @@ sudo: true
 branches:
   only:
     - main
-
+dist: xenial
 deploy:
   provider: heroku
   skip_cleanup: true
